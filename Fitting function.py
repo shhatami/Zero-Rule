@@ -1,4 +1,4 @@
-import csv
+import datafile.csv
 
 class zeroR:
     def __init__(self):
@@ -17,8 +17,8 @@ class zeroR:
 
 
     def loadData(self,nameDataset):
-        with open(nameDataset, newline='') as csvfile:
-            reader = csv.DictReader(csvfile)
+        with open(nameDataset, newline='') as datafile:
+            reader = datafile.csv.DictReader(datafile)
             self.dataset = list(reader)
             self.attNames = reader.fieldnames
         return
